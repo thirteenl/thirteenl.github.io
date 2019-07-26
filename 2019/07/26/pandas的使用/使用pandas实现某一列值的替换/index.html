@@ -6,16 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Thirteen</title>
+  <title>Thirteen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="DeepLearning,ReinforcementLearning,Python">
-<meta property="og:type" content="website">
+  <meta name="description" content="使用pandas实现整列数据的替换当我们有如下的数据，我们需要替换整列的Label时  我们可以采用如下方法： ​    思路： ​        1.将所得到的的值全部装进列表 ​        2.通过numpy将列表转为矩阵并且转置为所需形状 ​        3.替换 代码如下： import pandas as pdimport numpy as np l = []csv = pd.re">
+<meta name="keywords" content="DeepLearning,ReinforcementLearning,Python">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Thirteen">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/07/26/pandas的使用/使用pandas实现某一列值的替换/index.html">
 <meta property="og:site_name" content="Thirteen">
+<meta property="og:description" content="使用pandas实现整列数据的替换当我们有如下的数据，我们需要替换整列的Label时  我们可以采用如下方法： ​    思路： ​        1.将所得到的的值全部装进列表 ​        2.通过numpy将列表转为矩阵并且转置为所需形状 ​        3.替换 代码如下： import pandas as pdimport numpy as np l = []csv = pd.re">
 <meta property="og:locale" content="zh">
+<meta property="og:image" content="e:%5Cblog%5CThirteen%5Csource_posts%5Cpandas%E7%9A%84%E4%BD%BF%E7%94%A8%5C1564112528026.png">
+<meta property="og:updated_time" content="2019-07-26T03:53:39.252Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Thirteen">
+<meta name="twitter:description" content="使用pandas实现整列数据的替换当我们有如下的数据，我们需要替换整列的Label时  我们可以采用如下方法： ​    思路： ​        1.将所得到的的值全部装进列表 ​        2.通过numpy将列表转为矩阵并且转置为所需形状 ​        3.替换 代码如下： import pandas as pdimport numpy as np l = []csv = pd.re">
+<meta name="twitter:image" content="e:%5Cblog%5CThirteen%5Csource_posts%5Cpandas%E7%9A%84%E4%BD%BF%E7%94%A8%5C1564112528026.png">
   
     <link rel="alternative" href="/atom.xml" title="Thirteen" type="application/atom+xml">
   
@@ -155,70 +161,150 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-pandas的使用/使用pandas实现某一列值的替换" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用pandas实现整列数据的替换"><a href="#使用pandas实现整列数据的替换" class="headerlink" title="使用pandas实现整列数据的替换"></a>使用pandas实现整列数据的替换</h1><p>当我们有如下的数据，我们需要替换整列的Label时</p>
+<p><img src="E:%5Cblog%5CThirteen%5Csource_posts%5Cpandas%E7%9A%84%E4%BD%BF%E7%94%A8%5C1564112528026.png" alt="1564112528026"></p>
+<p>我们可以采用如下方法：</p>
+<p>​    思路：</p>
+<p>​        1.将所得到的的值全部装进列表</p>
+<p>​        2.通过numpy将列表转为矩阵并且转置为所需形状</p>
+<p>​        3.替换</p>
+<p>代码如下：</p>
+<p>import pandas as pd<br>import numpy as np</p>
+<p>l = []<br>csv = pd.read_csv(‘path’)<br>for i in range(len(csv)):<br>    l.append(i)<br>l_array =  np.array(l).reshape(-1,1)<br>csv[‘Label’]=l_array<br>print(csv.head())  # 打印前5行<br>csv.to_csv(‘path’, index=False)  # index=False 表示不将索引的那一列写入文件中,该参数默认为True</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/26/pandas的使用/使用pandas实现某一列值的替换/" class="archive-article-date">
-  	<time datetime="2019-07-26T03:40:53.798Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/26/pandas的使用/使用pandas实现某一列值的替换/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/30/hello-world/" class="archive-article-date">
-  	<time datetime="2019-06-30T14:36:42.505Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-30</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/30/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -241,8 +327,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

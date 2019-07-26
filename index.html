@@ -157,6 +157,63 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-pandas的使用/使用pandas实现某一列值的替换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用pandas实现整列数据的替换"><a href="#使用pandas实现整列数据的替换" class="headerlink" title="使用pandas实现整列数据的替换"></a>使用pandas实现整列数据的替换</h1><p>当我们有如下的数据，我们需要替换整列的Label时</p>
+<p><img src="E:%5Cblog%5CThirteen%5Csource_posts%5Cpandas%E7%9A%84%E4%BD%BF%E7%94%A8%5C1564112528026.png" alt="1564112528026"></p>
+<p>我们可以采用如下方法：</p>
+<p>​    思路：</p>
+<p>​        1.将所得到的的值全部装进列表</p>
+<p>​        2.通过numpy将列表转为矩阵并且转置为所需形状</p>
+<p>​        3.替换</p>
+<p>代码如下：</p>
+<p>import pandas as pd<br>import numpy as np</p>
+<p>l = []<br>csv = pd.read_csv(‘path’)<br>for i in range(len(csv)):<br>    l.append(i)<br>l_array =  np.array(l).reshape(-1,1)<br>csv[‘Label’]=l_array<br>print(csv.head())  # 打印前5行<br>csv.to_csv(‘path’, index=False)  # index=False 表示不将索引的那一列写入文件中,该参数默认为True</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/26/pandas的使用/使用pandas实现某一列值的替换/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
